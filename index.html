@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Typewriter Effect using CSS</title>
+    <title>Drop Caps using CSS</title>
     <style>
       body {
-        display: flex;
-        justify-content: center;
+        padding: 0 40px;
       }
-      h2 {
-        font-family: monospace;
-        /* Caret */
-        border-right: 2px solid orange;
-        animation: caret 0.5s step-end infinite, typing 3.5s steps(30, end);
-        /* typing */
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      @keyframes caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: orange;
-        }
-      }
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
+      p::first-letter {
+        float: left;
+        color: red;
+        font-size: 300%;
+        line-height: 30px;
+        margin-right: 5px;
       }
     </style>
   </head>
   <body>
     <div>
       <h2>Follow for more Tricks!</h2>
+      <p>
+        Everyone loves drop caps. It reminds us of the traditional printed book,
+        and is a great way to start a page of content. That 1st, large letter
+        really grabs your attention.
+      </p>
     </div>
   </body>
 </html>
