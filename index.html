@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Create Triangle Shape using CSS</title>
+    <title>Create Heart Shape with Pulse using CSS</title>
     <style>
       body {
-        padding: 0 40px;
+        padding: 0 60px;
       }
-      .triangle {
-        /* triangle color */
-        border-bottom: 50px solid red;
-        border-left: 25px solid transparent;
-        border-right: 25px solid transparent;
-        width: 0;
+      .heart {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 0, 0);
+        position: relative;
+        transform: rotate(45deg);
+        margin: 60px;
+        animation: pulse 1s infinite;
+      }
+      .heart::after {
+        content: " ";
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 0, 0);
+        border-radius: 50%;
+        position: absolute;
+        left: -50%;
+      }
+      .heart::before {
+        content: " ";
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 0, 0);
+        border-radius: 50%;
+        position: absolute;
+        top: -50%;
+      }
+      @keyframes pulse {
+        0% {
+          transform: rotate(45deg) scale(1);
+        }
+        50% {
+          transform: rotate(45deg) scale(1.1);
+        }
+        100% {
+          transform: rotate(45deg) scale(1);
+        }
       }
     </style>
   </head>
   <body>
     <div>
       <h2>Follow for more Tricks!</h2>
-      <div class="triangle"></div>
+      <div class="heart"></div>
     </div>
   </body>
 </html>
