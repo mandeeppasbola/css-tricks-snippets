@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Drop Caps using CSS</title>
+    <title>Create Triangle Shape using CSS</title>
     <style>
       body {
         padding: 0 40px;
       }
-      p::first-letter {
-        float: left;
-        color: red;
-        font-size: 300%;
-        line-height: 30px;
-        margin-right: 5px;
+      .triangle {
+        /* triangle color */
+        border-bottom: 50px solid red;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        width: 0;
       }
     </style>
   </head>
   <body>
     <div>
       <h2>Follow for more Tricks!</h2>
-      <p>
-        Everyone loves drop caps. It reminds us of the traditional printed book,
-        and is a great way to start a page of content. That 1st, large letter
-        really grabs your attention.
-      </p>
+      <div class="triangle"></div>
     </div>
   </body>
 </html>
