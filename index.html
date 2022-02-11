@@ -1,55 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Create Heart Shape with Pulse using CSS</title>
+    <title>Create Spinner using CSS</title>
     <style>
       body {
         padding: 0 60px;
       }
-      .heart {
+      .loader {
         width: 100px;
         height: 100px;
-        background-color: rgba(255, 0, 0);
-        position: relative;
-        transform: rotate(45deg);
-        margin: 60px;
-        animation: pulse 1s infinite;
-      }
-      .heart::after {
-        content: " ";
-        width: 100px;
-        height: 100px;
-        background-color: rgba(255, 0, 0);
+        border: 10px solid blueviolet;
         border-radius: 50%;
-        position: absolute;
-        left: -50%;
+        border-bottom-color: violet;
+        animation: loader 1s infinite linear;
+        margin: 20px 50px;
       }
-      .heart::before {
-        content: " ";
-        width: 100px;
-        height: 100px;
-        background-color: rgba(255, 0, 0);
-        border-radius: 50%;
-        position: absolute;
-        top: -50%;
-      }
-      @keyframes pulse {
+      @keyframes loader {
         0% {
-          transform: rotate(45deg) scale(1);
-        }
-        50% {
-          transform: rotate(45deg) scale(1.1);
+          transform: rotate(0deg);
         }
         100% {
-          transform: rotate(45deg) scale(1);
+          transform: rotate(360deg);
         }
       }
     </style>
   </head>
   <body>
-    <div>
-      <h2>Follow for more Tricks!</h2>
-      <div class="heart"></div>
-    </div>
+    <h2>Follow for more Tricks!</h2>
+    <div class="loader"></div>
   </body>
 </html>
